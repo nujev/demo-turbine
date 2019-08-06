@@ -1,0 +1,18 @@
+server:
+  port: 8085
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+spring:
+  application:
+    name: demo-turbine
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://{EUREKA-SERVER:localhost}:${EUREKA-PORT:8084}/eureka/
+turbine:
+  aggregator:
+    clusterConfig: DEMO
+  appConfig: demo
